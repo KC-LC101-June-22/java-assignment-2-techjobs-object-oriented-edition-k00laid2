@@ -6,7 +6,6 @@ public class Job {
 
     private int id;
     private static int nextId = 1;
-
     private String name;
     private Employer employer;
     private Location location;
@@ -46,12 +45,13 @@ public class Job {
 
     public String toString(){
 
-        return "\nID: " + getId() + "\n" +
-                "\nName: " + getName() + "\n" +
-                "\nEmployer: " + getEmployer().getValue() + "\n" +
-                "\nLocation: " + getLocation().getValue() + "\n" +
-                "\nPosition Type: " + getPositionType().getValue() + "\n" +
-                "\nCore Competency: " + getCoreCompetency().getValue() + "\n";
+        return "\nID: " + getId() +
+                "\nName: " + getName() +
+                "\nEmployer: " + getEmployer().getValue() +
+                "\nLocation: " + getLocation().getValue() +
+                "\nPosition Type: " + getPositionType().getValue() +
+                "\nCore Competency: " + getCoreCompetency().getValue()
+                + "\n";
     }
 
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
@@ -67,7 +67,7 @@ public class Job {
     }
 
     public String getName() {
-        if (name != null){
+        if (name != null && !name.isEmpty()){
             return name;
         } else return "Data not available";
     }

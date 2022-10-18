@@ -27,8 +27,8 @@ public abstract class JobField {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof CoreCompetency)) return false;
-        CoreCompetency that = (CoreCompetency) o;
+        if (!(o instanceof JobField)) return false;
+        JobField that = (JobField) o;
         return id == that.getId();
     }
     @Override
@@ -41,7 +41,7 @@ public abstract class JobField {
     }
 
     public String getValue() {
-        if (value != null){
+        if (value != null && !value.isEmpty()){
             return value;
         } else return "Data not available";
     }
